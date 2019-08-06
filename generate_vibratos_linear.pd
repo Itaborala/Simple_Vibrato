@@ -45,23 +45,23 @@
 #X obj 100 500 outlet~;
 #X obj 100 480 /~ 17;
 #X obj 50 50 r 1003-vib_range;
-#X obj 100 100 vibrato_instance 8000 7 1;
-#X obj 100 125 vibrato_instance 16000 7 0.716531;
-#X obj 100 150 vibrato_instance 24000 7 0.513417;
-#X obj 100 175 vibrato_instance 32000 7 0.367879;
-#X obj 100 200 vibrato_instance 40000 7 0.263597;
-#X obj 100 225 vibrato_instance 48000 7 0.188876;
-#X obj 100 250 vibrato_instance 56000 7 0.135335;
-#X obj 100 275 vibrato_instance 64000 7 0.096972;
-#X obj 100 300 vibrato_instance 72000 7 0.0694834;
-#X obj 100 325 vibrato_instance 80000 7 0.0497871;
-#X obj 350 100 vibrato_instance 88000 7 0.035674;
-#X obj 350 125 vibrato_instance 96000 7 0.0255615;
-#X obj 350 150 vibrato_instance 104000 7 0.0183156;
-#X obj 350 175 vibrato_instance 112000 7 0.0131237;
-#X obj 350 200 vibrato_instance 120000 7 0.00940356;
-#X obj 350 225 vibrato_instance 128000 7 0.00673795;
-#X obj 350 250 vibrato_instance 136000 7 0.00482795;
+#X obj 100 100 vibrato_instance 800 7 1;
+#X obj 100 125 vibrato_instance 1600 7 0.716531;
+#X obj 100 150 vibrato_instance 2400 7 0.513417;
+#X obj 100 175 vibrato_instance 3200 7 0.367879;
+#X obj 100 200 vibrato_instance 4000 7 0.263597;
+#X obj 100 225 vibrato_instance 4800 7 0.188876;
+#X obj 100 250 vibrato_instance 5600 7 0.135335;
+#X obj 100 275 vibrato_instance 6400 7 0.096972;
+#X obj 100 300 vibrato_instance 7200 7 0.0694834;
+#X obj 100 325 vibrato_instance 8000 7 0.0497871;
+#X obj 350 100 vibrato_instance 8800 7 0.035674;
+#X obj 350 125 vibrato_instance 9600 7 0.0255615;
+#X obj 350 150 vibrato_instance 10400 7 0.0183156;
+#X obj 350 175 vibrato_instance 11200 7 0.0131237;
+#X obj 350 200 vibrato_instance 12000 7 0.00940356;
+#X obj 350 225 vibrato_instance 12800 7 0.00673795;
+#X obj 350 250 vibrato_instance 13600 7 0.00482795;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 2 0 4 0;
@@ -110,7 +110,7 @@
 #X msg 605 765 start;
 #X msg 567 765 stop;
 #X obj 567 689 gate;
-#X obj 525 658 tgl 15 0 empty empty empty 17 7 0 10 -135113 -1 -1 0
+#X obj 525 658 tgl 15 0 empty empty empty 17 7 0 10 -135113 -1 -1 1
 1;
 #X obj 567 716 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -131,14 +131,14 @@
 #X msg 569 297 0;
 #X msg 571 258 bang;
 #X obj 570 279 delay 11000;
-#X msg 519 627 open tremolo_0_500_50.wav;
-#X obj 743 481 * 50;
 #X text 774 778 <- Change vibrato amplitude;
 #X text 702 331 of an increasing vibrato;
 #X text 702 310 Click here to play 11 seconds;
 #X text 550 656 click here to record sound;
 #X text 519 606 name of the soundfile to record;
 #X obj 232 330 expr $f1*$f2;
+#X obj 743 481 * 30;
+#X msg 519 627 open vibrato_0_300_30_linear.wav;
 #X connect 1 0 2 0;
 #X connect 2 1 5 0;
 #X connect 2 2 3 0;
@@ -155,7 +155,7 @@
 #X connect 9 0 16 0;
 #X connect 10 0 8 1;
 #X connect 11 0 12 1;
-#X connect 12 0 70 0;
+#X connect 12 0 68 0;
 #X connect 13 0 49 0;
 #X connect 16 0 23 0;
 #X connect 18 0 16 1;
@@ -195,7 +195,7 @@
 #X connect 52 0 8 0;
 #X connect 54 0 51 1;
 #X connect 55 0 56 0;
-#X connect 56 0 64 0;
+#X connect 56 0 69 0;
 #X connect 57 0 55 0;
 #X connect 58 0 59 0;
 #X connect 58 0 57 0;
@@ -205,6 +205,6 @@
 #X connect 60 0 58 0;
 #X connect 61 0 62 0;
 #X connect 62 0 60 0;
-#X connect 63 0 42 0;
-#X connect 64 0 19 0;
-#X connect 70 0 9 1;
+#X connect 68 0 9 1;
+#X connect 69 0 19 0;
+#X connect 70 0 42 0;
